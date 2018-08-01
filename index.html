@@ -3,44 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>IPyWidget export</title>
-    <style>
-      *{
-        margin:0px;
-        padding:0px;
-      }
-      .header{
-        width:100%;
-        height:80px;
-        background: #333;
-        color: #fff;
-        font-family: Helvetica;
-        position: relative;
-        top:-20px;
-      }
-      .header .title{
-        font-size: 23px;
-        position: relative;
-        top:30px;
-        left:20px;
-        letter-spacing: 2px;
-      }
-
-      .gmaps-figure{
-        border:1px solid red;
-      }
-
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
-
-
 <body>
-
-<div class="header">
-  <h1 class="title">Crowd-GPS-Sec</h1>
-</div>
-
-<iframe width="500" height="500" src="export.html"> </iframe>
-<iframe width="500" height="500" src="scatter.html"> </iframe>
-<iframe width="500" height="500" src="heatmap.html"> </iframe>
-
+  <div id="wrapper">
+    <div class="maps_outer">
+      <iframe id="mapf" src="export.html"> </iframe>
+    </div>
+    <div class="sidebar">
+      <h3 align="center">Crowd-GPS-Sec</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ea ipsam quam voluptas eligendi perferendis ipsum, sunt dicta at nisi temporibus itaque labore dignissimos saepe aperiam alias, commodi possimus iusto natus sed accusamus! Assumenda quasi minima pariatur nihil, quos distinctio, sed quaerat quam, enim quisquam nisi. Aliquam fugit est enim.</p>
+      <div id="button_holder">
+        <button class="cmap" id="scatter_test1">Test 1</button>
+        <button class="cmap" id="heatmap_test2">Test 2</button>
+        <button class="cmap" id="test1_test2">Test 1 + Test 2</button>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $('.cmap').click(function(){
+    var file = $(this).attr('id') + '.html';
+    $('#mapf').attr('src', file);
+  });
+</script>
+</html>

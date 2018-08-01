@@ -107,10 +107,10 @@ def opensky_data(output_file):
     data.to_csv(output_file)
 
 
-opensky_data("finaldemo.csv") #the .csv file where results are stored
+opensky_data("data.csv") #the .csv file where results are stored
 
 
-rawdata = pd.read_csv(r"finaldemo.csv", skiprows=1) 
+raw_data = pd.read_csv(r"data.csv", skiprows=1) 
 
 
 #rawdata['Unnamed: 8'] # selects the column with the 4th serial receiver id.
@@ -152,15 +152,15 @@ red_layer = gmaps.symbol_layer(
 fig = gmaps.figure()
 fig.add_layer(red_layer)
 fig.add_layer(gmaps.heatmap_layer(locations2))
-embed_minimal_html('export.html', views=[fig]) #html file that contains both scatter and heatmap
+embed_minimal_html('test1_test2.html', views=[fig]) #html file that contains both scatter and heatmap
 
 fig1 = gmaps.figure()
 fig1.add_layer(red_layer)
-embed_minimal_html('scatter.html', views=[fig1]) #html file that contains only the scatter plot
+embed_minimal_html('scatter_test1.html', views=[fig1]) #html file that contains only the scatter plot
 
 fig2= gmaps.figure()
 fig2.add_layer(gmaps.heatmap_layer(locations2))
-embed_minimal_html('heatmap.html', views=[fig2]) #html file that contains only the heatmap 
+embed_minimal_html('heatmap_test2.html', views=[fig2]) #html file that contains only the heatmap 
 
 '''gmap= gmplot.GoogleMapPlotter(0,0,2)
 
