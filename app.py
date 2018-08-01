@@ -99,8 +99,8 @@ class ImpalaWrapper(object):
 #initializing and logging into OpenSky Network and saving results to a .csv
 def opensky_data(output_file):
 
-    username = "labeeba"
-    password = "labeeba123"
+    username = input('Please enter username:')
+    password = input('Please enter password:')
     opensky = ImpalaWrapper(username, password)
 
     data = opensky.history()
