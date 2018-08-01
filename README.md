@@ -2,10 +2,10 @@
 
 ## Motivation
 
-Crowd-GPS-Sec is a solution proposed to detect and localize GPS spoofing attacks on on moving airborne targets 
+Crowd-GPS-Sec is a solution proposed to detect and localize GPS spoofing attacks on moving airborne targets 
 such as UAVs or commercial airliners. 
 
-The GPS Spoofing detection module consists of two tests.
+The GPS Spoofing detection module consists of two tests:
 * Test 1 - Cross Checks with MLAT 
     Condition: MLAT requires atleast 4 sensors on the ground to receive ADS-B messages.
 * Test 2 - Multiple Aircraft Comparison
