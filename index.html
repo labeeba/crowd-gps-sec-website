@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPyWidget export</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="maps_outer">
+      <iframe id="mapf" src="test1_test2.html"> </iframe>
+    </div>
+    <div class="sidebar">
+      <h3 align="center">Crowd-GPS-Sec</h3>
+      <p>Crowd-GPS-Sec is a solution proposed to detect and localize GPS spoofing attacks on moving airborne targets such as UAVs or commercial airliners.
+    </p> <p>   The GPS Spoofing detection module consists of two tests: </p>
+       <p>
+      Test 1 - Cross Checks with MLAT <br>
+       Condition: MLAT requires atleast 4 sensors on the ground to receive ADS-B messages. </li>
+      </p>
+      <p>Test 2 - Multiple Aircraft Comparison <br>
+        Condition: Aircraft comparison requires atleast 2 aircrafts to receive the spoofed signal.</li>
+      </p>
+
+      <div id="button_holder">
+        <button class="cmap" id="scatter_test1">Test 1</button>
+        <button class="cmap" id="heatmap_test2">Test 2</button>
+        <button class="cmap" id="test1_test2">Test 1 + Test 2</button>
+      </div>
+
+      <p> Data from OpenSky-Network queried at 1532649599 (Thursday, 26-Jul-18 23:59:59 UTC) </p>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $('.cmap').click(function(){
+    var file = $(this).attr('id') + '.html';
+    $('#mapf').attr('src', file);
+  });
+</script>
+</html>
